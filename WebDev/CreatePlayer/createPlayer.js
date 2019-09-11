@@ -15,7 +15,7 @@ function handleFormSubmit(form){
     addPlayer(formDataObj);
     return false;
 }
-
+    
 function addPlayer(formDataObj){
     var xhr = new XMLHttpRequest();
     var url = "http://localhost:9000/players";
