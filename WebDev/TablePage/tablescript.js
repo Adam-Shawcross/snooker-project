@@ -15,7 +15,7 @@ function getAllPlayers() {
     
         for(let i=0;i<json.length;i++){
             let temp = json[i];
-            newTableEntries(teamTable,temp["ranking"],temp["firstName"], temp["lastName"], temp["dateBirth"], temp["earnings"]);
+            newTableEntries(teamTable,temp["ranking"], temp["lastName"],temp["firstName"], temp["age"], "£"+temp["earnings"]);
         }
     }
     }
@@ -32,9 +32,9 @@ function newTableEntries(table){
    for( let i =1; i <arguments.length;i++){
        box = document.createElement("td");
        box.innerHTML = arguments[i];
-       row.append(box);
+       row.appendChild(box);
    }
-   table.append(row);
+   table.appendChild(row);
 }
 
 // function display() {
