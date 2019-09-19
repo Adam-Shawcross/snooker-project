@@ -15,7 +15,7 @@ function getAllPlayers() {
     
         for(let i=0;i<json.length;i++){
             let temp = json[i];
-            newTableEntries(teamTable,temp["ranking"], temp["lastName"],temp["firstName"], temp["age"], "£"+temp["earnings"]);
+            newTableEntries(playerTable,temp["id"],temp["ranking"], temp["lastName"],temp["firstName"], temp["age"], "£"+temp["earnings"]);
         }
     }
     }
@@ -24,7 +24,7 @@ function getAllPlayers() {
     return false;
 }
 
-const teamTable = document.getElementById("playertable");
+const playerTable = document.getElementById("playertable");
 
 
 
@@ -44,11 +44,19 @@ function deletePlayer(){
         var xhr = new XMLHttpRequest();
         var url = "http://localhost:9000/players/";
         xhr.open("DELETE", url+id, true);
-        //xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.setRequestHeader("Content-Type", "application/json");
         xhr.onload = () => {
 
             location.href="../TablePage/TablePage.html";
+            getAllPlayers();
+           
         }
         xhr.send(null);
         return false;
+}
+
+function updatePlayer(){
+    var id = document.getElementById("ID").value
+    var xhr = new XMLHttpRequest();
+    var url = "http://localhost:9000/players/";
 }

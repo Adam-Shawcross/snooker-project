@@ -21,6 +21,7 @@
     <table id="playertable" class="table table-hover table-striped table-dark">
       <thead>
         <tr>
+          <th scope="col">ID</th>
           <th scope="col">Ranking</th>
           <th scope="col">Last Name</th>
           <th scope="col">First Name</th>
@@ -73,8 +74,19 @@
     <button type="submit">Submit</button>
   </form>
   <button><a href="../HomePage/HomePage.html">Return</a></button>
-
-
+  
+  <section>
+    <h2>Update Players</h2>
+  <form onsubmit="return updatePlayer(this)">
+    <p>ID you wish to update <input type="number" id="ID"></p>
+    <p>First Name <input type="text" id="firstName">:</p>
+    <p>Last Name <input type="text" id="lastName">:</p>
+    <p>Age <input type="number" id="age"></p>
+    <p>World Ranking <input type="number" id="ranking"></p>
+    <p>Career Earnings <input type="number" id="earnings"></p>
+    <button type="submit">Submit</button>
+</form>
+</section>
   <script src="tablescript.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
