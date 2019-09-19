@@ -11,13 +11,13 @@ function getAllPlayers() {
             json = JSON.parse(xhr.responseText);
             console.log(xhr.responseText)
             console.log(json);
-            
-    
-        for(let i=0;i<json.length;i++){
-            let temp = json[i];
-            newTableEntries(playerTable,temp["id"],temp["ranking"], temp["lastName"],temp["firstName"], temp["age"], "£"+temp["earnings"]);
+
+
+            for (let i = 0; i < json.length; i++) {
+                let temp = json[i];
+                newTableEntries(playerTable, temp["id"], temp["ranking"], temp["lastName"], temp["firstName"], temp["age"], "£" + temp["earnings"]);
+            }
         }
-    }
     }
 
     xhr.send();
@@ -28,35 +28,65 @@ const playerTable = document.getElementById("playertable");
 
 
 
-async function newTableEntries(table){
-   row = document.createElement("tr");
-   for( let i =1; i <arguments.length;i++){
-       box = document.createElement("td");
-       box.innerHTML = arguments[i];
-       row.appendChild(box);
-   }
-   table.appendChild(row);
+async function newTableEntries(table) {
+    row = document.createElement("tr");
+    for (let i = 1; i < arguments.length; i++) {
+        box = document.createElement("td");
+        box.innerHTML = arguments[i];
+        row.appendChild(box);
+    }
+    table.appendChild(row);
 }
 
-function deletePlayer(){
+function deletePlayer() {
 
-        var id = document.getElementById("playerid").value
-        var xhr = new XMLHttpRequest();
-        var url = "http://localhost:9000/players/";
-        xhr.open("DELETE", url+id, true);
-        xhr.setRequestHeader("Content-Type", "application/json");
-        xhr.onload = () => {
+    var id = document.getElementById("playerid").value
+    var xhr = new XMLHttpRequest();
+    var url = "http://localhost:9000/players/";
+    xhr.open("DELETE", url + id, true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.onload = () => {
 
-            location.href="../TablePage/TablePage.html";
-            getAllPlayers();
-           
+        location.href = "../TablePage/TablePage.html";
+        getAllPlayers();
+
+    }
+    xhr.send(null);
+    return false;
+}
+
+
+
+
+function handleFormSubmit(form) {
+    const formDataObj = {};
+    for (let element of form.elements) {
+        if (element.id) {
+            formDataObj[element.id] = element.value;
+
+            console.log(element.value);
         }
-        xhr.send(null);
-        return false;
+    }
+
+    updatePlayer(formDataObj);
+    return false;
 }
 
-function updatePlayer(){
+function updatePlayer() {
     var id = document.getElementById("ID").value
     var xhr = new XMLHttpRequest();
     var url = "http://localhost:9000/players/";
+    xhr.open("PUT", url + id, true);
+    xhr.onreadystatechange = () => {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            location.href = "../TablePage/TablePage.html";
+            getAllPlayers();
+        }
+    }
+
+
+}
+
+xhr.send(JSON.stringify(formDataObj));
+return false;
 }
