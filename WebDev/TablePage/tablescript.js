@@ -7,7 +7,7 @@ function newTableEntries(table) {
     }
     table.appendChild(row);
     }
-    
+
 function getAllPlayers() {
     var json;
     const playerTable = document.getElementById("playertable");
@@ -29,7 +29,7 @@ function getAllPlayers() {
 }
 
 function updatePlayer(formDataObj) {
-    var id = document.getElementById("id").value
+    var id = document.getElementById("id").value;
     var xhr = new XMLHttpRequest();
     var url = "http://localhost:9000/players/";
     xhr.open("PUT", url + id, true);
@@ -60,7 +60,7 @@ function deletePlayer() {
         } else {
             alert("Please enter a correct id"); //learn correct error code for this to be more accurate
         }
-    }
+    };
 
     xhr.send(null);
     return false;

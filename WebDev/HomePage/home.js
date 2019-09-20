@@ -1,7 +1,7 @@
 function homeButton(){
     //something
 
-    localStorage.setItem('name', 'dave');
-    location.href='HomePage.html'
+    
+    location.href="HomePage.html";
 }
 

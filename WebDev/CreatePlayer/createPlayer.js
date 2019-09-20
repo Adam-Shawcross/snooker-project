@@ -6,9 +6,7 @@ function handleFormSubmit(form){
     
     for(let element of form.elements){
         if(element.id){
-        formDataObj[element.id]=element.value;
-        
-        console.log(element.value);
+        formDataObj[element.id]=element.value; 
         }
     }
     
@@ -22,9 +20,8 @@ function addPlayer(formDataObj){
     xhr.open("POST", url, true);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onload = () => {
-        console.log(formDataObj);
-        
-        location.href="../TablePage/TablePage.html"
-}
-xhr.send(JSON.stringify(formDataObj));
+
+        location.href="../TablePage/TablePage.html";
+    }
+    xhr.send(JSON.stringify(formDataObj));
 }
