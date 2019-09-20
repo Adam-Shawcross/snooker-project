@@ -18,8 +18,10 @@ function getAllPlayers() {
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4 && xhr.status === 200) {
             json = JSON.parse(xhr.responseText);
+            
             for (let i = 0; i < json.length; i++) {
-                newTableEntries(playerTable, json[i].id, json[i].ranking, json[i].lastName, json[i].firstName, json[i].age, "£" + json[i].earnings);
+                let index = json[i];
+                newTableEntries(playerTable, index.id, index.ranking, index.lastName, index.firstName, index.age, "£" + index.earnings);
             }
         }
     }
