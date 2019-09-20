@@ -9,13 +9,10 @@ function getAllPlayers() {
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4 && xhr.status === 200) {
             json = JSON.parse(xhr.responseText);
-            console.log(xhr.responseText)
-            console.log(json);
-
-
             for (let i = 0; i < json.length; i++) {
-                let temp = json[i];
-                newTableEntries(playerTable, temp["id"], temp["ranking"], temp["lastName"], temp["firstName"], temp["age"], "£" + temp["earnings"]);
+                // let temp = json[i];
+                newTableEntries(playerTable, json[i].id, json[i].ranking, json[i].lastName, json[i].firstName, json[i].age, "£" + json[i].earnings)
+                // newTableEntries(playerTable, temp["id"], temp["ranking"], temp["lastName"], temp["firstName"], temp["age"], "£" + temp["earnings"]);
             }
         }
     }
@@ -28,7 +25,7 @@ const playerTable = document.getElementById("playertable");
 
 
 
-async function newTableEntries(table) {
+function newTableEntries(table) {
     row = document.createElement("tr");
     for (let i = 1; i < arguments.length; i++) {
         box = document.createElement("td");
@@ -47,9 +44,9 @@ function deletePlayer() {
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onload = () => {
 
-        location.href = "../TablePage/TablePage.html";
+        
         getAllPlayers();
-
+        location.href = "../TablePage/TablePage.html";
     }
     xhr.send(null);
     return false;
@@ -64,29 +61,29 @@ function handleFormSubmit(form) {
         if (element.id) {
             formDataObj[element.id] = element.value;
 
-            console.log(element.value);
         }
     }
-
     updatePlayer(formDataObj);
     return false;
 }
 
-function updatePlayer() {
-    var id = document.getElementById("ID").value
+function updatePlayer(formDataObj) {
+    var id = document.getElementById("id").value
     var xhr = new XMLHttpRequest();
     var url = "http://localhost:9000/players/";
     xhr.open("PUT", url + id, true);
+    xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4 && xhr.status === 200) {
             location.href = "../TablePage/TablePage.html";
             getAllPlayers();
+        }else{
+            console.log(xhr.responseText)
         }
     }
 
-
+    xhr.send(JSON.stringify(formDataObj));
+    return false;
 }
 
-xhr.send(JSON.stringify(formDataObj));
-return false;
-}
+

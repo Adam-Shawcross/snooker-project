@@ -10,7 +10,7 @@
 
 </head>
 
-<body onload="getAllPlayers()", onload="getAllTournaments()">
+<body onload="getAllPlayers()" , onload="getAllTournaments()">
   <a href="../HomePage/HomePage.html">
     <h1 align="center"><img src="black-ballblack.png" alt="respotted-black.png" width="700px" height="210">
     </h1>
@@ -70,23 +70,28 @@
       </tbody>
     </table>
   </section>
+  <h2>Delete Player by id</h2>
   <form onsubmit="deletePlayer()" id="deleteplayerform"><input type="number" id="playerid">
     <button type="submit">Submit</button>
   </form>
-  <button><a href="../HomePage/HomePage.html">Return</a></button>
-  
+
+
   <section>
     <h2>Update Players</h2>
-  <form onsubmit="return handleFormSubmit(this)">
-    <p>ID you wish to update <input type="number" id="ID"></p>
-    <p>First Name <input type="text" id="firstName">:</p>
-    <p>Last Name <input type="text" id="lastName">:</p>
-    <p>Age <input type="number" id="age"></p>
-    <p>World Ranking <input type="number" id="ranking"></p>
-    <p>Career Earnings <input type="number" id="earnings"></p>
-    <button type="submit">Submit</button>
-</form>
-</section>
+    <form onsubmit="return handleFormSubmit(this)">
+      <p>ID you wish to update <input type="number" id="id"></p>
+      <p>First Name <input type="text" id="firstName"></p>
+      <p>Last Name <input type="text" id="lastName"></p>
+      <p>Age <input type="number" id="age"></p>
+      <p>World Ranking <input type="number" id="ranking"></p>
+      <p>Career Earnings <input type="number" id="earnings"></p>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <button><a href="../HomePage/HomePage.html">Return</a></button>
+
+
   <script src="tablescript.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
