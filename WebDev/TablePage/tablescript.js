@@ -119,7 +119,7 @@ function sortTable(n) {
                         break;
                     }
                 } else {
-                    if (Number(x.innerHTML) > Number(y.innerHTML)) {
+                    if (Number(x.innerHTML) < Number(y.innerHTML)) {
                         shouldSwitch = true;
                         break;
                     }
