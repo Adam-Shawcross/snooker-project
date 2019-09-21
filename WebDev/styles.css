@@ -32,9 +32,13 @@ h6{font-size:.7em; color:#666600;}
 .felt{
         border-color: #4CAF50;
         color: green;
-      }
+    }
     
 .felt:hover {
         background-color: #4CAF50;
         color: white;
-            }
+    }
+
+ th:hover {
+    cursor: pointer;
+    }
