@@ -6,7 +6,7 @@ function newTableEntries(table) {
         row.appendChild(box);
     }
     table.appendChild(row);
-    }
+}
 
 function getAllPlayers() {
     var json;
@@ -18,7 +18,7 @@ function getAllPlayers() {
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4 && xhr.status === 200) {
             json = JSON.parse(xhr.responseText);
-            
+
             for (let i = 0; i < json.length; i++) {
                 let index = json[i];
                 newTableEntries(playerTable, index.id, index.ranking, index.lastName, index.firstName, index.age, "£" + index.earnings);
@@ -60,7 +60,7 @@ function deletePlayer() {
             getAllPlayers();
             location.href = "../TablePage/TablePage.html";
         } else {
-            alert("Please enter a correct id"); //learn correct error code for this to be more accurate
+            alert("Please enter an ID"); //no error code avalible to code for potentialll , maybe ready state? would have to code around the cross matching of id's
         }
     };
 
