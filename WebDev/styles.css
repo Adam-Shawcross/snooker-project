@@ -2,7 +2,9 @@ body{
     font-size:100%;
     font-family:Verdana, Arial, Helvetica, sans-serif;
     color:#1f1919;
-    background-color:rgb(184, 133, 133);
+    background: #CCCCCC;
+    margin-left: 5%;
+    margin-right: 5%;
     }
 
     h1{font-size:1.5em;}
@@ -29,3 +31,11 @@ body{
     ul{
     font-variant:small-caps;
     }
+
+    #bulk{
+        padding-top: 5%;
+        padding-right: 5%;
+        padding-bottom: 5%;
+        padding-left: 5%
+      }
+
