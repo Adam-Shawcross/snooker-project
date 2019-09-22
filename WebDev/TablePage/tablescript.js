@@ -21,7 +21,7 @@ function getAllPlayers() {
 
             for (let i = 0; i < json.length; i++) {
                 let index = json[i];
-                newTableEntries(playerTable, index.id, index.ranking, index.lastName, index.firstName, index.age, "£" + index.earnings);
+                newTableEntries(playerTable, index.id, index.ranking, index.lastName, index.firstName, index.age, index.earnings);
             }
         }
     }
@@ -81,14 +81,20 @@ function handleFormSubmit(form) {
     return false;
 }
 
-function sortTablePlayer() {
-    let tableName = "player"
-    sortTable(tableName);
+function sortTablePlayer(n) {
+    let tableName = "player";
+    sortTable(n, tableName);
 }
 
-function sortTable(n) {
+function sortTableTournament(n) {
+    let tableName = "tournament";
+    sortTable(n, tableName);
+}
+
+
+function sortTable(n, tableName) {
     var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-    table = document.getElementById("playertable");
+    table = document.getElementById(tableName + "table");
     switching = true;
     dir = "asc";
     while (switching) {
@@ -100,7 +106,7 @@ function sortTable(n) {
             x = rows[i].getElementsByTagName("TD")[n];
             y = rows[i + 1].getElementsByTagName("TD")[n];
 
-            if (dir == "asc") {
+            if (dir == "asc") {//need to add if statemtn one for player one for ttournament
                 if (n == 2 | n == 3) {
                     if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
                         shouldSwitch = true;
