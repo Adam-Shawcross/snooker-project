@@ -50,3 +50,7 @@ tr:hover td {
  th:hover {
     cursor: pointer;
     }
+
+.banner:hover{
+    cursor: pointer;
+}
