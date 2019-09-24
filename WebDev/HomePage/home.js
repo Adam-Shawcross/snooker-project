@@ -1,4 +1,4 @@
 function homeButton(){
-    location.href="HomePage.html";
+    location.href="../HomePage.html";
 }
 
