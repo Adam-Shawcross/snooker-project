@@ -5,8 +5,8 @@ function addPlayer(formDataObj){
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onload = () => {
 
-        location.href="../TablePage/TablePage.html";
-    }
+        location.href="../TablePage/TablePage.html"
+    };
     xhr.send(JSON.stringify(formDataObj));
 }
 
