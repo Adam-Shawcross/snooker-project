@@ -96,7 +96,7 @@ function sortTable(n, tableName) {
             y = rows[i + 1].getElementsByTagName("TD")[n];
 
             if (dir === "asc") {//need to add if statemtn one for player one for ttournament
-                if (n == 2 | n == 3) {
+                if (n === 2 | n === 3) {
                     if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
                         shouldSwitch = true;
                         break;
@@ -108,7 +108,7 @@ function sortTable(n, tableName) {
                     }
                 }
             } else if (dir === "desc") {
-                if (n == 2 | n == 3) {
+                if (n === 2 | n === 3) {
                     if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
                         shouldSwitch = true;
                         break;
@@ -126,7 +126,7 @@ function sortTable(n, tableName) {
             switching = true;
             switchcount++;
         } else {
-            if (switchcount == 0 && dir == "asc") {
+            if (switchcount === 0 && dir === "asc") {
                 dir = "desc";
                 switching = true;
             }
