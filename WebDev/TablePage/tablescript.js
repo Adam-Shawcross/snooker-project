@@ -41,7 +41,7 @@ function updatePlayer(formDataObj) {
             location.href = "../TablePage.html";
             getAllPlayers();
         } else if (xhr.status === 500) {
-            alert("Please enter a valid ID")
+            alert("Please enter a valid ID");
         } else {
             alert("Please enter the ID of which you wish to update");
         };
