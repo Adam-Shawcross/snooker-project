@@ -24,7 +24,7 @@ function getAllPlayers() {
                 newTableEntries(playerTable, index.id, index.ranking, index.lastName, index.firstName, index.age, index.earnings);
             }
         }
-    }
+    };
 
     xhr.send();
     return false;
