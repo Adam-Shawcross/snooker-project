@@ -38,7 +38,7 @@ function updatePlayer(formDataObj) {
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4 && xhr.status === 200) {
-            location.href = "../TablePage/TablePage.html";
+            location.href = "../TablePage.html";
             getAllPlayers();
         }
     };
@@ -58,7 +58,7 @@ function deletePlayer() {
 
         if (xhr.readyState === 4 && xhr.status === 200) {
             getAllPlayers();
-            location.href = "../TablePage/TablePage.html";
+            location.href = "../TablePage.html";
         } else {
             alert("Please enter an ID"); //no error code avalible to code for potentialll , maybe ready state? would have to code around the cross matching of id's
         }
