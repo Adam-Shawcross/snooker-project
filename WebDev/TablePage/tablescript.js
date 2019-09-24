@@ -12,7 +12,7 @@ function getAllPlayers() {
     var json;
     const playerTable = document.getElementById("playertable");
     var xhr = new XMLHttpRequest();
-    var url = "http://localhost:9000/players";
+    var url = "http://34.89.0.54:9000/players";
     xhr.open("GET", url, true);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onreadystatechange = () => {
@@ -33,7 +33,7 @@ function getAllPlayers() {
 function updatePlayer(formDataObj) {
     var id = document.getElementById("id").value;
     var xhr = new XMLHttpRequest();
-    var url = "http://localhost:9000/players/";
+    var url = "http://34.89.0.54:9000/players/";
     xhr.open("PUT", url + id, true);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onreadystatechange = () => {
@@ -51,7 +51,7 @@ function deletePlayer() {
 
     var id = document.getElementById("playerid").value;
     var xhr = new XMLHttpRequest();
-    var url = "http://localhost:9000/players/";
+    var url = "http://34.89.0.54:9000/players/";
     xhr.open("DELETE", url + id, true);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onreadystatechange = () => {

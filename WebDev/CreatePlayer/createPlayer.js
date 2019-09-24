@@ -1,6 +1,6 @@
 function addPlayer(formDataObj){
     var xhr = new XMLHttpRequest();
-    var url = "http://localhost:9000/players";
+    var url = "http://34.89.0.54:9000/players";
     xhr.open("POST", url, true);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onload = () => {
