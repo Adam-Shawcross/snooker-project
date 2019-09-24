@@ -4,8 +4,12 @@ function addPlayer(formDataObj){
     xhr.open("POST", url, true);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onload = () => {
+        if (xhr.readyState === 4 && xhr.status === 200) {
 
         location.href="../TablePage.html";
+        }else{
+            alert("Please enter correct data")
+        }
     };
     xhr.send(JSON.stringify(formDataObj));
 }
