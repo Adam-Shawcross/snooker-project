@@ -29,6 +29,10 @@ h6{font-size:.7em; color:#666600;}
         border-radius: 5px;
       }
 
+      tr:nth-child(even) {
+        background-color: #695959
+      }
+
 .felt{
         border-color: #4CAF50;
         color: green;
