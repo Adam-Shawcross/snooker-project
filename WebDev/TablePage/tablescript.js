@@ -41,7 +41,7 @@ function updatePlayer(formDataObj) {
             location.href = "../TablePage/TablePage.html";
             getAllPlayers();
         }
-    }
+    };
 
     xhr.send(JSON.stringify(formDataObj));
     return false;
@@ -81,17 +81,6 @@ function handleFormSubmit(form) {
     return false;
 }
 
-function sortTablePlayer(n) {
-    let tableName = "player";
-    sortTable(n, tableName);
-}
-
-function sortTableTournament(n) {
-    let tableName = "tournament";
-    sortTable(n, tableName);
-}
-
-
 function sortTable(n, tableName) {
     var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
     table = document.getElementById(tableName + "table");
@@ -106,7 +95,7 @@ function sortTable(n, tableName) {
             x = rows[i].getElementsByTagName("TD")[n];
             y = rows[i + 1].getElementsByTagName("TD")[n];
 
-            if (dir == "asc") {//need to add if statemtn one for player one for ttournament
+            if (dir === "asc") {//need to add if statemtn one for player one for ttournament
                 if (n == 2 | n == 3) {
                     if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
                         shouldSwitch = true;
@@ -118,7 +107,7 @@ function sortTable(n, tableName) {
                         break;
                     }
                 }
-            } else if (dir == "desc") {
+            } else if (dir === "desc") {
                 if (n == 2 | n == 3) {
                     if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
                         shouldSwitch = true;
@@ -144,6 +133,19 @@ function sortTable(n, tableName) {
         }
     }
 }
+
+function sortTablePlayer(n) {
+    let tableName = "player";
+    sortTable(n, tableName);
+}
+
+function sortTableTournament(n) {
+    let tableName = "tournament";
+    sortTable(n, tableName);
+}
+
+
+
 
 
 
