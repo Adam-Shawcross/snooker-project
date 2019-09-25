@@ -46,7 +46,7 @@ function getAllTournaments() {
             console.log("I'm in onload");
             for (let i = 0; i < json.length; i++) {
                 let index = json[i];
-                newTableEntries(tournamentTable, index.id, index.name, index.location, index.venue);
+                newTableEntries(tournamentTable, index.id, index.name, index.venue, index.location);
             }
         }
     };
