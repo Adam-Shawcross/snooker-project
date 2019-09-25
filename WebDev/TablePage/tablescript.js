@@ -134,7 +134,7 @@ function deleteTournament() {
 
 }
 
-function handleFormSubmit(form, tablename) {
+function handleFormSubmit(form) {
     const formDataObj = {};
     for (let element of form.elements) {
         if (element.id) {
@@ -142,11 +142,11 @@ function handleFormSubmit(form, tablename) {
 
         }
     }
-    if (tablename === "player") {
-        updatePlayer(formDataObj);
+    if (document.getElementById("update-tournament")){
+        updateTournament(formDataObj);
         return false;
     } else {
-        updateTournament(formDataObj);
+        updatePlayer(formDataObj);
     }
 }
 
