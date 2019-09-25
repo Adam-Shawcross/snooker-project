@@ -32,7 +32,7 @@ function getAllPlayers() {
 
 function getAllTournaments() {
     var json;
-    const tournamentTable = document.getElementById("tournament table");
+    const tournamentTable = document.getElementById("tournament-table");
     var xhr = new XMLHttpRequest();
     var url = "http://34.89.36.254:9000/tournaments";
     xhr.open("GET", url, true);
@@ -40,10 +40,10 @@ function getAllTournaments() {
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4 && xhr.status === 200) {
             json = JSON.parse(xhr.responseText);
-
+            console.log(json);
             for (let i = 0; i < json.length; i++) {
                 let index = json[i];
-                newTableEntries(tournamentTable, index.id, index.name, index.venue, index.location);
+                newTableEntries(tournamentTable, index.id, index.name, index.location, index.venue);
             }
         }
     };
