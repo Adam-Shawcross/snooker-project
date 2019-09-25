@@ -1,6 +1,6 @@
-function addPlayer(formDataObj){
+function addTournament(formDataObj){
     var xhr = new XMLHttpRequest();
-    var url = "http://34.89.36.254:9000/players";
+    var url = "http://34.89.36.254:9000/tournaments";
     xhr.open("POST", url, true);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onload = () => {
@@ -14,7 +14,7 @@ function addPlayer(formDataObj){
     xhr.send(JSON.stringify(formDataObj));
 }
 
-function handleFormPlayer(form){
+function handleFormTournament(form){
     const formDataObj={};
     
     
@@ -24,7 +24,6 @@ function handleFormPlayer(form){
         }
     }
     
-    addPlayer(formDataObj);
+    addTournament(formDataObj);
     return false;
 }
-    
