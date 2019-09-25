@@ -32,7 +32,7 @@ function getAllPlayers() {
 
 function getAllTournaments() {
     var json;
-    
+
     const tournamentTable = document.getElementById("tournament-table");
     var xhr = new XMLHttpRequest();
     var url = "http://34.89.36.254:9000/tournaments";
@@ -56,6 +56,7 @@ function getAllTournaments() {
 }
 
 function updatePlayer(formDataObj) {
+
     var id = document.getElementById("id").value;
     var xhr = new XMLHttpRequest();
     var url = "http://34.89.36.254:9000/players/";
@@ -133,7 +134,7 @@ function deleteTournament() {
 
 }
 
-function handleFormSubmit(form) {
+function handleFormSubmit(form, tablename) {
     const formDataObj = {};
     for (let element of form.elements) {
         if (element.id) {
@@ -141,8 +142,12 @@ function handleFormSubmit(form) {
 
         }
     }
-    updatePlayer(formDataObj);
-    return false;
+    if (tablename === "player") {
+        updatePlayer(formDataObj);
+        return false;
+    } else {
+        updateTournament(formDataObj);
+    }
 }
 
 function sortTable(n, tableName) {
