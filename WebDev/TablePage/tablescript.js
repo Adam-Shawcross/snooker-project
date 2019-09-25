@@ -29,6 +29,7 @@ function getAllPlayers() {
     xhr.send();
     return false;
 }
+
 function getAllTournaments() {
     var json;
     const tournamentTable = document.getElementById("tournament table");
