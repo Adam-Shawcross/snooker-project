@@ -32,15 +32,18 @@ function getAllPlayers() {
 
 function getAllTournaments() {
     var json;
+    debugger;
     const tournamentTable = document.getElementById("tournament-table");
     var xhr = new XMLHttpRequest();
     var url = "http://34.89.36.254:9000/tournaments";
     xhr.open("GET", url, true);
+    console.log("im in get all tournaments method")
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4 && xhr.status === 200) {
             json = JSON.parse(xhr.responseText);
             console.log(json);
+            console.log("I'm in onload");
             for (let i = 0; i < json.length; i++) {
                 let index = json[i];
                 newTableEntries(tournamentTable, index.id, index.name, index.location, index.venue);
