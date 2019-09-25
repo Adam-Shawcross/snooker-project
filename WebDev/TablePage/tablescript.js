@@ -73,7 +73,7 @@ function updatePlayer(formDataObj) {
 }
 
 function updateTournament(formDataObj) {
-    var id = document.getElementById("id").value;
+    var id = document.getElementById("tournament-id").value;
     var xhr = new XMLHttpRequest();
     var url = "http://34.89.36.254:9000/tournaments/";
     xhr.open("PUT", url + id, true);
