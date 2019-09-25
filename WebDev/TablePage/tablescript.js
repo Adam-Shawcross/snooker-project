@@ -34,7 +34,7 @@ function getAllTournaments() {
     var json;
     const tournamentTable = document.getElementById("tournament table");
     var xhr = new XMLHttpRequest();
-    var url = "http://34.89.36.254:9000/tournnaments";
+    var url = "http://34.89.36.254:9000/tournaments";
     xhr.open("GET", url, true);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onreadystatechange = () => {
@@ -72,7 +72,7 @@ function updatePlayer(formDataObj) {
 function updateTournament(formDataObj) {
     var id = document.getElementById("id").value;
     var xhr = new XMLHttpRequest();
-    var url = "http://34.89.36.254:9000/tournament/";
+    var url = "http://34.89.36.254:9000/tournaments/";
     xhr.open("PUT", url + id, true);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onreadystatechange = () => {
