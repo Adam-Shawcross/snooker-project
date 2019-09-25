@@ -32,7 +32,7 @@ function getAllPlayers() {
 
 function getAllTournaments() {
     var json;
-    debugger;
+    
     const tournamentTable = document.getElementById("tournament-table");
     var xhr = new XMLHttpRequest();
     var url = "http://34.89.36.254:9000/tournaments";
