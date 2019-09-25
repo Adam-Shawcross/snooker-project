@@ -49,10 +49,11 @@
       <table id="tournament table" class="table table-hover table-striped table-dark">
         <thead>
           <tr>
+            <th scope="col">ID</th>
             <th scope="col">Name</th>
             <th scope="col">Location</th>
             <th scope="col">Location</th>
-            <th scope="col">Date</th>
+
 
           </tr>
         </thead>
@@ -91,14 +92,30 @@
               <p>Career Earnings <input type="number" id="earnings"></p>
               <button class="btn felt" type="submit">Submit</button>
             </form>
+            <h2>Delete Player by id</h2>
+            <form onsubmit="deletePlayer()" id="deleteplayerform"><input type="number" id="playerid">
+              <button type="submit" class="btn btn-outline-danger">Delete</button>
+            </form>
           </section>
         </div>
         <div class="col">
-          <h2>Delete Player by id</h2>
-          <form onsubmit="deletePlayer()" id="deleteplayerform"><input type="number" id="playerid">
 
-            <button type="submit" class="btn btn-outline-danger">Delete</button>
-          </form>
+
+          <section>
+            <h2>Update Tournament</h2>
+            <form onsubmit="return handleFormSubmit(this)">
+              <p>ID you wish to update <input type="number" id="id"></p>
+              <p>Name <input type="text" id="name"></p>
+              <p>Venue<input type="text" id="venue"></p>
+              <p>Location <input type="text" id="location"></p>
+              <button class="btn felt" type="submit">Submit</button>
+            </form>
+
+            <h2>Delete Tournament</h2>
+            <form onsubmit="deleteTournament()" id="deletetournamentform"><input type="number" id="tournamentid">
+              <button type="submit" class="btn btn-outline-danger">Delete</button>
+          </section>
+
         </div>
       </div>
     </div>

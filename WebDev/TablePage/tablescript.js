@@ -12,7 +12,7 @@ function getAllPlayers() {
     var json;
     const playerTable = document.getElementById("playertable");
     var xhr = new XMLHttpRequest();
-    var url = "http://34.89.0.54:9000/players";
+    var url = "http://34.89.36.254:9000/players";
     xhr.open("GET", url, true);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onreadystatechange = () => {
@@ -29,11 +29,32 @@ function getAllPlayers() {
     xhr.send();
     return false;
 }
+function getAllTournaments() {
+    var json;
+    const tournamentTable = document.getElementById("tournament table");
+    var xhr = new XMLHttpRequest();
+    var url = "http://34.89.36.254:9000/tournnaments";
+    xhr.open("GET", url, true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.onreadystatechange = () => {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            json = JSON.parse(xhr.responseText);
+
+            for (let i = 0; i < json.length; i++) {
+                let index = json[i];
+                newTableEntries(tournamentTable, index.id, index.name, index.venue, index.location);
+            }
+        }
+    };
+
+    xhr.send();
+    return false;
+}
 
 function updatePlayer(formDataObj) {
     var id = document.getElementById("id").value;
     var xhr = new XMLHttpRequest();
-    var url = "http://34.89.0.54:9000/players/";
+    var url = "http://34.89.36.254:9000/players/";
     xhr.open("PUT", url + id, true);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onreadystatechange = () => {
@@ -47,11 +68,50 @@ function updatePlayer(formDataObj) {
     return false;
 }
 
+function updateTournament(formDataObj) {
+    var id = document.getElementById("id").value;
+    var xhr = new XMLHttpRequest();
+    var url = "http://34.89.36.254:9000/tournament/";
+    xhr.open("PUT", url + id, true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.onreadystatechange = () => {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            location.href = "../TablePage.html";
+            getAllTournaments();
+        };
+    };
+
+    xhr.send(JSON.stringify(formDataObj));
+    return false;
+}
+
 function deletePlayer() {
 
     var id = document.getElementById("playerid").value;
     var xhr = new XMLHttpRequest();
-    var url = "http://34.89.0.54:9000/players/";
+    var url = "http://34.89.36.254:9000/players/";
+    xhr.open("DELETE", url + id, true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.onreadystatechange = () => {
+
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            getAllPlayers();
+            location.href = "../TablePage.html";
+        } else {
+            alert("Please enter an ID"); //no error code avalible to code for potentialll , maybe ready state? would have to code around the cross matching of id's
+        }
+    };
+
+    xhr.send(null);
+    return false;
+
+}
+
+function deleteTournament() {
+
+    var id = document.getElementById("tournamentid").value;
+    var xhr = new XMLHttpRequest();
+    var url = "http://34.89.36.254:9000/tournaments/";
     xhr.open("DELETE", url + id, true);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onreadystatechange = () => {
