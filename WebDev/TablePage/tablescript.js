@@ -88,17 +88,17 @@ function updateTournament(formDataObj) {
 }
 
 function deletePlayer() {
-
+    console.log("In function")
     var id = document.getElementById("playerid").value;
     var xhr = new XMLHttpRequest();
     var url = "http://34.89.36.254:9000/players/";
     xhr.open("DELETE", url + id, true);
     xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.onload = () => {
-
+    xhr.onreadystatechange = () => {
+        console.log("in readstatechange")
         if (xhr.readyState === 4 && xhr.status === 200) {
 
-            location.href = "../TablePage.html";
+            
             getAllPlayers();
         
         } else {
@@ -112,16 +112,17 @@ function deletePlayer() {
 }
 
 function deleteTournament() {
+    console.log("In function")
     var id = document.getElementById("tournamentid").value;
     var xhr = new XMLHttpRequest();
     var url = "http://34.89.36.254:9000/tournaments/";
     xhr.open("DELETE", url+id, true);
     xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.onload = () => {
-        
+    xhr.onreadystatechange = () => {
+        console.log("in readstatechange")
         if (xhr.readyState === 4 && xhr.status === 200) {
             
-            location.href = "../TablePage.html";
+            
             getAllTournaments();
             
             
