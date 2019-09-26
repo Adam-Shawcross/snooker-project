@@ -13,23 +13,22 @@
     <h1 align="center"><img src="black-ballblack.png" class="banner" onclick="return homeButton()"
             alt="respotted-black.png" width="700px" height="210"></h1>
 
-    <h2>Create Player</h2>
+
+
+    <h2>Create Tournament</h2>
     <section>
-        <form onsubmit="return handleFormPlayer(this)">
-            <p>First Name <input type="text" id="firstName"></p>
-            <p>Last Name <input type="text" id="lastName"></p>
-            <p>Age <input type="number" id="age"></p>
-            <p>World Ranking <input type="number" id="ranking"></p>
-            <p>Career Earnings <input type="number" id="earnings"></p>
+        <form onsubmit="return handleFormTournament(this)">
+            <p>Name<input type="text" id="name"></p>
+            <p>Venue<input type="text" id="venue"></p>
+            <p>Location<input type="text" id="location"></p>
             <button class="btn felt" type="submit">Submit</button>
         </form>
     </section>
 
 
-
     <button onclick="return homeButton()">Return</button>
 
-    <script src="createPlayer.js"></script>
+    <script src="createTournament.js"></script>
     <script src="home.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
