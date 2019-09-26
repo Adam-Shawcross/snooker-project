@@ -94,10 +94,10 @@ function deletePlayer() {
     var url = "http://34.89.36.254:9000/players/";
     xhr.open("DELETE", url + id, true);
     xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.onreadystatechange = () => {
+    xhr.onload = () => {
 
         if (xhr.readyState === 4 && xhr.status === 200) {
-            
+
             location.href = "../TablePage.html";
         
         } else {
@@ -116,7 +116,7 @@ function deleteTournament() {
     var url = "http://34.89.36.254:9000/tournaments/";
     xhr.open("DELETE", url+id, true);
     xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.onreadystatechange = () => {
+    xhr.onload = () => {
 
         if (xhr.readyState === 4 && xhr.status === 200) {
             location.href = "../TablePage.html";
