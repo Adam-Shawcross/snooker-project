@@ -110,7 +110,7 @@ function deletePlayer() {
 }
 
 function deleteTournament() {
-
+    console.log("button worked");
     var id = document.getElementById("tournamentid").value;
     var xhr = new XMLHttpRequest();
     var url = "http://34.89.36.254:9000/tournaments/";
