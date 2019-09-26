@@ -85,7 +85,7 @@ This project is able to run both locally and virtually, using the current VM ip 
 Home Page
 ![Home Page Wireframe](/Documentation/HomePage.png)
 Create Player
-![Create Player Wireframe]()
+![Create Player Wireframe](/Documentation/CreatePage.png)
 Table Page
 ![Table Page Wireframe](/Documentation/Create.png)
 
