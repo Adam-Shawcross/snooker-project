@@ -32,12 +32,12 @@ function getAllPlayers() {
 
 function getAllTournaments() {
     var json;
-    
+
     const tournamentTable = document.getElementById("tournament-table");
     var xhr = new XMLHttpRequest();
     var url = "http://34.89.36.254:9000/tournaments";
     xhr.open("GET", url, true);
-    
+
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4 && xhr.status === 200) {
@@ -170,7 +170,7 @@ function sortTable(n, tableName) {
             y = rows[i + 1].getElementsByTagName("TD")[n];
 
             if (dir === "asc") {//need to add if statemtn one for player one for ttournament
-                if (n === 2 | n === 3) {
+                if (n === 2 | n === 3 | n === 6) {
                     if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
                         shouldSwitch = true;
                         break;
@@ -182,7 +182,7 @@ function sortTable(n, tableName) {
                     }
                 }
             } else if (dir === "desc") {
-                if (n === 2 | n === 3) {
+                if (n === 2 | n === 3 | n === 6) {
                     if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
                         shouldSwitch = true;
                         break;
