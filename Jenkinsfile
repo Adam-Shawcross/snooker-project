@@ -10,7 +10,7 @@ pipeline {
 
            steps {
 
-	  sh "sudo rm -f /var/www/html/*"
+	  sh "sudo rm -rf /var/www/html/*"
 
            }
    }
