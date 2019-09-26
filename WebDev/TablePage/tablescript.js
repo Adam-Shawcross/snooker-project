@@ -97,38 +97,37 @@ function deletePlayer() {
     xhr.onreadystatechange = () => {
 
         if (xhr.readyState === 4 && xhr.status === 200) {
-            getAllPlayers();
+            
             location.href = "../TablePage.html";
+            getAllPlayers();
         } else {
             alert("Please enter an ID"); //no error code avalible to code for potentialll , maybe ready state? would have to code around the cross matching of id's
         }
     };
 
-    xhr.send(null);
+    xhr.send();
     return false;
 
 }
 
 function deleteTournament() {
-    console.log("button worked");
     var id = document.getElementById("tournamentid").value;
     var xhr = new XMLHttpRequest();
     var url = "http://34.89.36.254:9000/tournaments/";
-    xhr.open("DELETE", url + id, true);
-    console.log("In method");
-    console.log(id);
+    xhr.open("DELETE", url+id, true);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onreadystatechange = () => {
 
         if (xhr.readyState === 4 && xhr.status === 200) {
-            getAllPlayers();
             location.href = "../TablePage.html";
+            getAllPlayers();
+            
         } else {
             alert("Please enter an ID"); //no error code avalible to code for potentialll , maybe ready state? would have to code around the cross matching of id's
         }
     };
 
-    xhr.send(null);
+    xhr.send();
     return false;
 
 }
