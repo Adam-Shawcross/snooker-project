@@ -36,7 +36,7 @@ I decided to create a Snooker player and tournament database to allow access to 
 <a name="erd"></a>
 ### Entity Relationship Diagrams
 #### Initial plan
-![Initial ERD](/folder/file.png)
+![Initial ERD](/Documentation/InitialERD.png)
 
 The initial plan for the ERD consisted of two tables to ensure simplicity and consistanty. Understanding my own exposure to these technologies and processes i believed it was a fair assesment and prediction of what i could achieve.
 
@@ -83,11 +83,11 @@ This project is able to run both locally and virtually, using the current VM ip 
 ## Front End Design
 ### Wireframes
 Home Page
-![Home Page Wireframe](/folder/filename.png)
+![Home Page Wireframe](/Documentation/HomePage.png)
 Create Player
 ![Create Player Wireframe]()
 Table Page
-![Table Page Wireframe](/folder/filename.png)
+![Table Page Wireframe](/Documentation/Create.png)
 
 ### Final Appearance
 
