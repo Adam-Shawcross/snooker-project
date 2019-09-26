@@ -68,7 +68,7 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <section>
+          
             <h2>Update Players</h2>
             <form onsubmit="return handleFormPlayer(this)">
               <p>ID you wish to update <input type="number" id="id"></p>
@@ -83,7 +83,7 @@
             <form onsubmit="deletePlayer()" id="deleteplayerform"><input type="number" id="playerid">
               <button type="submit" class="btn btn-outline-danger">Delete</button>
             </form>
-          </section>
+          
         </div>
         <div class="col">
 
@@ -112,6 +112,8 @@
 
   </section>
 
+
+  <button onclick="return homeButton()">Return</button>
 
 
   <script src="tablescript.js"></script>
