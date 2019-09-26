@@ -214,7 +214,7 @@ function sortTablePlayer(n) {
 }
 
 function sortTableTournament(n) {
-    let tableName = "tournament-table";
+    let tableName = "tournament-";
     sortTable(n, tableName);
 }
 
