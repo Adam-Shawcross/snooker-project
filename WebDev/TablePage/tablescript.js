@@ -117,9 +117,9 @@ function deleteTournament() {
     xhr.open("DELETE", url+id, true);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onload = () => {
-
+        console.log("in onload");
         if (xhr.readyState === 4 && xhr.status === 200) {
-            location.href = "../TablePage.html";
+            console.log("in if statement");
             
             
         } else {
