@@ -94,10 +94,7 @@ Table Page
 <a name="improve"></a>
 ## Improvements for the Future
 
-In later sprints, I would also like create a health-benefit entity which would have a many to many relationship with poses, so that users can create routines based on their focus for their practice. After this, I would add the capability to create different user accounts. At this point, I would remove the functionality for the user to add and remove poses themselves in the front end. These would instead be hard coded into the database, which the user could manipulate only for adding and removing them from their own routines.
-
-
-At this point in time delete is temperemental and does not consistantly work on the front end, in future sprints i would absolutely fix this. 
+In future sprints i would like to refine down my code, so that it hits SOLID principles more effectively and cut down on code duplication. At this point in time delete is temperemental and does not consistantly work on the front end, in future sprints i would absolutely fix this. 
 
 In terms of future developments planned, I have in mind:
 
@@ -106,6 +103,7 @@ In terms of future developments planned, I have in mind:
 * A legends table for players whove retired 
 * Create your own tournament with players involved
 * Relational databases
+* Add update as a autofilled modal saving the user having to type out all the data that is staying the same
 
 
 
