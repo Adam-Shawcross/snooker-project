@@ -115,6 +115,8 @@ function deleteTournament() {
     var xhr = new XMLHttpRequest();
     var url = "http://34.89.36.254:9000/tournaments/";
     xhr.open("DELETE", url + id, true);
+    console.log("In method");
+    console.log(id);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onreadystatechange = () => {
 
