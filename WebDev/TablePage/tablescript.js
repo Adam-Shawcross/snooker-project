@@ -99,6 +99,7 @@ function deletePlayer() {
         if (xhr.readyState === 4 && xhr.status === 200) {
 
             location.href = "../TablePage.html";
+            getAllPlayers();
         
         } else {
             alert("Please enter an ID"); //no error code avalible to code for potentialll , maybe ready state? would have to code around the cross matching of id's
@@ -117,9 +118,11 @@ function deleteTournament() {
     xhr.open("DELETE", url+id, true);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onload = () => {
-        console.log("in onload");
+        
         if (xhr.readyState === 4 && xhr.status === 200) {
-            console.log("in if statement");
+            
+            location.href = "../TablePage.html";
+            getAllTournaments();
             
             
         } else {
