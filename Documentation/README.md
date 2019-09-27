@@ -54,6 +54,7 @@ JUnit, Mockito and Selenium tests have been used for automated testing. With cod
 ### Report
 
 Test coverage for the API is at 76%, I have a multitude of selenium tests for the functionality of all buttons and testing CRUD functionality.
+![Mockito/JUnit](/Documentation/.png)
 
 ![Deployment Pipeline](/Documentation/.png)
 
