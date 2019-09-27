@@ -55,6 +55,7 @@ JUnit, Mockito and Selenium tests have been used for automated testing. With cod
 
 Test coverage for the API is at 76%, I have a multitude of selenium tests for the functionality of all buttons and testing CRUD functionality.
 ![Mockito/JUnit](/Documentation/TestCoverage.PNG)
+![Selenium](/Documentation/SeleniumTests.PNG)
 
 Codacy is in use on both front end, and back end both with B and A grades respectively. 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/dabab8e56e484860a592f0a29b082e8e)](https://www.codacy.com/manual/Adam-Shawcross/project_API?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Adam-Shawcross/project_API&amp;utm_campaign=Badge_Grade)
@@ -69,7 +70,7 @@ I used jenkins to automate my front end deployment, with a webhook to GitHub whi
 
 This project is able to run both locally and virtually, using the current VM ip and available on localhost if need be. 
 
-![Deployment Pipeline](/folder/file.png)
+![Deployment Pipeline](/Documentation/CIPIpeline.png)
 <a name="tech"></a>
 ### Technologies Used
 
