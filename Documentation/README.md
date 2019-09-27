@@ -41,7 +41,7 @@ I decided to create a Snooker player and tournament database to allow access to 
 The initial plan for the ERD consisted of two tables to ensure simplicity and consistanty. Understanding my own exposure to these technologies and processes i believed it was a fair assesment and prediction of what i could achieve.
 
 #### Delivered solution
-![Final ERD](/Documentation/FinalERD.jpg)
+![Final ERD](/Documentation/FinalERD.png)
 
 As shown in the end, my expectations were somewhat close to reality as in fact I have both tables functional (delete front end issues). However, in the time given i could not achieve the relational aspect of my databases. 
 
@@ -99,7 +99,7 @@ Table Page
 
 ### Final Appearance
 Home Page
-![Home Page Actual Wireframe](/Documentation/HomePageActual.png)
+![Home Page Actual Wireframe](/Documentation/HomePageActual.PNG)
 Create Player
 ![Create Player Actual Wireframe](/Documentation/CreatePageActual.png)
 Table Page
