@@ -98,7 +98,11 @@ Table Page
 ![Table Page Wireframe](/Documentation/Create.png)
 
 ### Final Appearance
-
+![Home Page Actual Wireframe](/Documentation/HomePageActual.png)
+Create Player
+![Create Player Actual Wireframe](/Documentation/CreatePageActual.png)
+Table Page
+![Table Page Actual Wireframe](/Documentation/TablePageActual.png)
 <a name="improve"></a>
 ## Improvements for the Future
 
