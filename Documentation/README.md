@@ -36,7 +36,7 @@ I decided to create a Snooker player and tournament database to allow access to 
 <a name="erd"></a>
 ### Entity Relationship Diagrams
 #### Initial plan
-![Initial ERD](/folder/file.png)
+![Initial ERD](/Documentation/InitialERD.png)
 
 The initial plan for the ERD consisted of two tables to ensure simplicity and consistanty. Understanding my own exposure to these technologies and processes i believed it was a fair assesment and prediction of what i could achieve.
 
@@ -53,8 +53,12 @@ JUnit, Mockito and Selenium tests have been used for automated testing. With cod
 <a name="report"></a>
 ### Report
 
-Test coverage for the API is at ...., I have a multitude of selenium tests for the functionality of all buttons and testing CRUD functionality.
-Codacy is in use on both front end, back end and sleenium testing with grades of B, A and A respectively.
+Test coverage for the API is at 76%, I have a multitude of selenium tests for the functionality of all buttons and testing CRUD functionality.
+Codacy is in use on both front end, and back end both with B and A grades respectively. 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/dabab8e56e484860a592f0a29b082e8e)](https://www.codacy.com/manual/Adam-Shawcross/project_API?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Adam-Shawcross/project_API&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2dccfe3aa0744e8aaabe32e0ab825d98)](https://www.codacy.com/manual/Adam-Shawcross/snooker-project?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Adam-Shawcross/snooker-project&amp;utm_campaign=Badge_Grade)
+
+
 
 <a name="depl"></a>
 ## Deployment
@@ -75,7 +79,7 @@ This project is able to run both locally and virtually, using the current VM ip 
 * Maven - Dependency Management
 * JUnit, Mockito - Standard Testing
 * Codacy - Static Testing
-
+* [Selenium](https://github.com/Adam-Shawcross/SoloProject-SeleniumTests) - Automated testing
 * [Trello](https://trello.com/b/DGzwV3Ss/snooker-player-database) - Project Tracking
 * GCP - Live Environment
 
@@ -83,11 +87,11 @@ This project is able to run both locally and virtually, using the current VM ip 
 ## Front End Design
 ### Wireframes
 Home Page
-![Home Page Wireframe](/folder/filename.png)
+![Home Page Wireframe](/Documentation/HomePage.png)
 Create Player
-![Create Player Wireframe]()
+![Create Player Wireframe](/Documentation/CreatePage.png)
 Table Page
-![Table Page Wireframe](/folder/filename.png)
+![Table Page Wireframe](/Documentation/Create.png)
 
 ### Final Appearance
 
