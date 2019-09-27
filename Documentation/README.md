@@ -106,10 +106,10 @@ Table Page
 <a name="improve"></a>
 ## Improvements for the Future
 
-In future sprints i would like to refine down my code, so that it hits SOLID principles more effectively and cut down on code duplication. At this point in time delete is temperemental and does not consistantly work on the front end, in future sprints i would absolutely fix this. 
+In future sprints i would like to refine down my code, so that it hits SOLID principles more effectively and cut down on code duplication. At this point in time delete is tempremental and does not consistantly work on the front end, in future sprints i would fix this. 
 
 In terms of future developments planned, I have in mind:
-
+* Restructuring the file system in which jenkins copies my repository(ie jenkinsfile commands and then internally the pathways to scripts as they try a wrong path), as it means localhost currently does not access scripts and css in the right manner
 * Alerts for incorrect data types entered
 * Portals for admins, so only they can change player and tournament data
 * A legends table for players whove retired 
