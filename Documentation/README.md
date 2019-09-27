@@ -41,7 +41,7 @@ I decided to create a Snooker player and tournament database to allow access to 
 The initial plan for the ERD consisted of two tables to ensure simplicity and consistanty. Understanding my own exposure to these technologies and processes i believed it was a fair assesment and prediction of what i could achieve.
 
 #### Delivered solution
-![Final ERD](/Documentation/ERD_Final.jpg)
+![Final ERD](/Documentation/FinalERD.jpg)
 
 As shown in the end, my expectations were somewhat close to reality as in fact I have both tables functional (delete front end issues). However, in the time given i could not achieve the relational aspect of my databases. 
 
@@ -54,7 +54,7 @@ JUnit, Mockito and Selenium tests have been used for automated testing. With cod
 ### Report
 
 Test coverage for the API is at 76%, I have a multitude of selenium tests for the functionality of all buttons and testing CRUD functionality.
-![Mockito/JUnit](/Documentation/.png)
+![Mockito/JUnit](/Documentation/TestCoverage.png)
 
 ![Deployment Pipeline](/Documentation/.png)
 
@@ -98,6 +98,7 @@ Table Page
 ![Table Page Wireframe](/Documentation/Create.png)
 
 ### Final Appearance
+Home Page
 ![Home Page Actual Wireframe](/Documentation/HomePageActual.png)
 Create Player
 ![Create Player Actual Wireframe](/Documentation/CreatePageActual.png)
