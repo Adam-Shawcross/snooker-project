@@ -43,7 +43,7 @@ The initial plan for the ERD consisted of two tables to ensure simplicity and co
 #### Delivered solution
 ![Final ERD](/Documentation/ERD_Final.jpg)
 
-As shown in the end my expectations were somewhat close to reality as in fact I hhave both tables functional (delte front end issues). However, in the time given i could not achieve the relational aspect of my databses. 
+As shown in the end, my expectations were somewhat close to reality as in fact I have both tables functional (delete front end issues). However, in the time given i could not achieve the relational aspect of my databases. 
 
 <a name="testing"></a>
 ## Testing
@@ -54,6 +54,9 @@ JUnit, Mockito and Selenium tests have been used for automated testing. With cod
 ### Report
 
 Test coverage for the API is at 76%, I have a multitude of selenium tests for the functionality of all buttons and testing CRUD functionality.
+
+![Deployment Pipeline](/Documentation/.png)
+
 Codacy is in use on both front end, and back end both with B and A grades respectively. 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/dabab8e56e484860a592f0a29b082e8e)](https://www.codacy.com/manual/Adam-Shawcross/project_API?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Adam-Shawcross/project_API&amp;utm_campaign=Badge_Grade)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/2dccfe3aa0744e8aaabe32e0ab825d98)](https://www.codacy.com/manual/Adam-Shawcross/snooker-project?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Adam-Shawcross/snooker-project&amp;utm_campaign=Badge_Grade)
@@ -77,7 +80,7 @@ This project is able to run both locally and virtually, using the current VM ip 
 * Apache - Web server
 * Jenkins - CI Server
 * Maven - Dependency Management
-* JUnit, Mockito - Standard Testing
+* [JUnit, Mockito](https://github.com/Adam-Shawcross/project_API) - Standard Testing
 * Codacy - Static Testing
 * [Selenium](https://github.com/Adam-Shawcross/SoloProject-SeleniumTests) - Automated testing
 * [Trello](https://trello.com/b/DGzwV3Ss/snooker-player-database) - Project Tracking
