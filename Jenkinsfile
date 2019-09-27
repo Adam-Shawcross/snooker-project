@@ -18,7 +18,7 @@ pipeline {
 
            steps {
 
-	  
+          sh "sudo cp -pf WebDev/styles.css"
           sh "sudo cp -rpf WebDev/HomePage/* /var/www/html/"
           sh "sudo cp -rpf WebDev/CreateTournament/* /var/www/html/"
           sh "sudo cp -rpf WebDev/TablePage/* /var/www/html/"
